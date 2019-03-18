@@ -1,0 +1,28 @@
+
+https://www.journaldev.com/21127/spring-boot-rest-example
+
+http://localhost:8080/
+http://localhost:8080/person/get
+http://localhost:8080/person/get?name=Vasu
+
+http://localhost:8080/person/update    (POST)
+http://localhost:8080/person/update2   (POST, JSON)
+
+------------------------------------------------------------------------------------------
+
+Content-Type: application/x-www-form-urlencoded  (Default)
+User-Agent: curl/7.64.0
+
+curl http://localhost:8080/
+
+curl -v http://localhost:8080/     
+                       
+curl -i http://localhost:8080/  
+
+curl http://localhost:8080/person/get?name=Srinivas       //query parameter
+
+curl -d "name=Vasu" http://localhost:8080/person/get      //to send Request Parameter data
+
+curl -d "name=Vasu" http://localhost:8080/person/update
+
+curl -H "Content-Type: application/json" -X POST -d {\"name\":\"Srini\"} http://localhost:8080/person/update2     //post JSON data
